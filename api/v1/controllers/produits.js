@@ -15,4 +15,4 @@ let produits1 = async (req, res) => {
       })
   
   }
-  module.exports =produits1 ;
+  module.exports = produits1 ;

@@ -9,6 +9,7 @@ const Account = mongoose.model("account", {
 	Email:String,
 	password:String,
 	confirm_your_Password:String,
+	programme:String
 	
   });
 module.exports = Account;

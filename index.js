@@ -10,15 +10,31 @@ var login =require("./api/v1/controllers/login");
 var coaches = require("./api/v1/controllers/coaches");
 var produits = require("./api/v1/controllers/produits");
 var produits2 = require("./api/v1/controllers/produits2");
+var produits3=require("./api/v1/controllers/produits3");
+var programme=require("./api/v1/controllers/programme");
+var programmeuser = require("./api/v1/controllers/programmeuser")
+
+
 app.use(bodyParser());
 
 app.use(cors());
-app.get("/produits2",produits2)
-app.get("/produits",produits)
+
+
+
+
+app.get("/programme",programme);
+app.get("/produits2",produits2);
+app.get("/produits",produits);
+app.get("/produits3",produits3);
 app.get("/card", card);
 app.post("/signup", Signup);
 app.post("/login", login);
+app.put("/programmeuser",programmeuser)
 app.get("/coaches",coaches);
+
+
+
+
 
 mongoose.connect("mongodb+srv://mehdi:Mehdi@cluster0.hv3w0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
     .then(db => {
