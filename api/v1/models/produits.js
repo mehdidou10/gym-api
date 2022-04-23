@@ -4,7 +4,7 @@ const produits = mongoose.model("produits", {
 
 	
 	Name:String,
-	prix:String,
+	prix:Number,
 	description:String,
 	photo1:String,
 	photo2:String,

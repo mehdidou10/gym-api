@@ -13,6 +13,8 @@ var produits2 = require("./api/v1/controllers/produits2");
 var produits3=require("./api/v1/controllers/produits3");
 var programme=require("./api/v1/controllers/programme");
 var programmeuser = require("./api/v1/controllers/programmeuser")
+var leproduit =require("./api/v1/controllers/leproduit")
+var orders = require("./api/v1/controllers/orders");
 
 
 app.use(bodyParser());
@@ -21,7 +23,7 @@ app.use(cors());
 
 
 
-
+app.post('/orders',orders);
 app.get("/programme",programme);
 app.get("/produits2",produits2);
 app.get("/produits",produits);
@@ -29,7 +31,8 @@ app.get("/produits3",produits3);
 app.get("/card", card);
 app.post("/signup", Signup);
 app.post("/login", login);
-app.put("/programmeuser",programmeuser)
+app.put("/programmeuser",programmeuser);
+app.post("/leproduit",leproduit);
 app.get("/coaches",coaches);
 
 
@@ -45,4 +48,4 @@ mongoose.connect("mongodb+srv://mehdi:Mehdi@cluster0.hv3w0.mongodb.net/myFirstDa
     
 
 
-app.listen(777);
+app.listen(777); 
